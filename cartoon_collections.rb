@@ -20,7 +20,14 @@ end
 
 long_planeteer_calls(planeteer_calls)
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
-  cheese_types = ["cheddar", "gouda", "camembert"]
+items = ["umbrella","spinach","cheddar","helicopter"]
+
+def find_the_cheese(potentially_cheesy_items)
+  cheeses = ["gouda","cheddar","camembert"]
+
+  potentially_cheesy_items.find do |maybe_cheese|
+    cheeses.include?(maybe_cheese)
+  end
 end
+
+find_the_cheese(items)
